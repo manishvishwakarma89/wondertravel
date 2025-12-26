@@ -1,22 +1,20 @@
-1. Clone Repository
-  git clone https://github.com/manishvishwakarma89/wanderlust.git
-2. Download   the required dependecies
-  cd wanderlust/
-  npm run installer
-  npm install
-3. **Set Up Environment Variables ***
-  Create .env sample file in the backend directory and add the follwing variables:
-  PORT=5173
-  MONGODB_URI= "your_connetionstring"
-  JWT_SECRET= your_jwt_secret_key
-
-4. **Navigate to the Backend Directory ***
-  cd wanderlust/backend/
-  npm i
-5. **Install Dependencies ***
-  npm install
-6. **Set Up Environment Variables ***
-  Create .env sample file in the backend directory and add the follwing variables:
-  PORT=5000
-  MONGODB_URI= "your_connetionstring"
-  JWT_SECRET= your_jwt_secret_key
+Setting up the Project
+======================
+1. Clone your forked repository.
+```bash
+git clone https://github.com/manishvishwa1989/wanderlust.git
+2. Download the required dependecies
+```bash
+pip install -r requirements.txt
+cd wanderlust
+run npm i
+3. Set up the database
+```bash
+make sure install mongoDB and run it port 27017
+Option 1: mongoimport
+mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray
+4. Setup Redis
+cp backend/.env.sample backend/.env && cp frontend/.env.sample frontend/.env.local
+Make sure to set the correct Redis URL in backend/.env
+5. Launch the development server with npm start in the root directory of the repository.
+```bash
