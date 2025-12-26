@@ -1,0 +1,6 @@
+FROM node:24
+WORKDIR /app
+COPY . .
+RUN npm i
+COPY .env.sample .env.local
+EXPOSE 5173
